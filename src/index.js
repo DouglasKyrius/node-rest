@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 4000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-require('./controllers/authController')(app);
+require('./app/controllers/index')(app);
 
 app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}`);
